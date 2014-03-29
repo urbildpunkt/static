@@ -460,6 +460,7 @@ strong {
         -o-appearance: none;
         appearance: none;
         border-radius: 0.375em;
+        display: inline;
         font-size: .9em;
         font-style: italic;
         margin: 0;
