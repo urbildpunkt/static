@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>OpenGov</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/styles.css">
+	<!--[if IE]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<h1><img src="img/opengov-logo.png" alt="Nearby City"></h1>
+		</div>
+	</header>
+
+	<div class="container">
+
+		<div class="persona">
+			<div class="persona-image">
+			<img src="img/knope.jpg" alt="Government Official">
+			</div>
+			<div class="persona-content">
+				<h2>Government Official</h2>
+				<p>Curious about becoming an OpenGov customer, wants to see other governments using the service (proving credibility).</p>
+				<p class="persona-detail">Showing her the closest customers brings the possibility of easily reaching out for a recommendation.</p>
+			</div>
+		</div>
+		<div class="persona">
+			<div class="persona-image">
+				<img src="img/anne.jpg" alt="Citizen">
+			</div>
+			<div class="persona-content">
+				<h2>Citizen</h2>
+				<p>Looking to see if her local government is an OpenGov customer and/or to browse data.</p>
+				<p class="persona-detail">Future Idea: If her local government is missing, encourage her to speak out and let them know she wants to see their data opened (using social media or some ‘petitioning’ system).</p>
+			</div>
+		</div>
+		
+		<p><strong>Tasks: </strong> present user the with closest customer, allow them to view more, and give them the option to manually input a new location.</p>
+		
+		<hr>
+
+		<div class="wireframes">
+			<p><strong>First Pass:</strong> Addressing all tasks individually.</p>
+			<p><img src="img/wireframe-1.png" alt="Wireframe"></p>
+			<p><strong>Second Pass:</strong> Addressing all tasks at once, removing unnecessary steps.</p>
+			<p><img src="img/wireframe-2.png" alt="Wireframe"></p>
+		</div>
+
+		<hr>
+
+	</div><!-- end container -->
+
+	<div class="map">
+		<div class="container">
+			<div class="card">
+
+				<div class="card-header">
+					<a href="javascript:void(0)" class="featured-logo"><img src="img/paloalto-logo.png" alt="Local Government"></a>
+				</div>
+
+				<div class="card-search">
+					<div class="search-bar">
+						<a href="javascript:void(0)" class="nearby-button js-trigger"><img src="img/nearby-icon.png" alt=""></a>
+						<div class="search-and-submit">
+							<input type="search" placeholder="Enter City or Zip" />
+							<button type="submit" class="js-trigger"><img src="img/search-icon.png" alt=""></button>
+						</div>
+					</div>
+					<ul class="search-results">
+						<li><a href="javascript:void(0)"><img src="img/mountainview-logo.png" alt="Nearby City"></a></li>
+						<li><a href="javascript:void(0)"><img src="img/saratoga-logo.png" alt="Nearby City"></a></li>
+						<li><a href="javascript:void(0)"><img src="img/salinas-logo.png" alt="Nearby City"></a></li>
+						<li><a href="javascript:void(0)"><img src="img/monterey-logo.png" alt="Nearby City"></a></li>
+					</ul>
+				</div><!-- end card-search -->
+
+			</div><!-- end card -->
+		</div><!-- end container -->
+	</div><!-- end map -->
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script>
+		jQuery('.js-trigger')
+		.bind('click focus', function(){
+			$('.card').toggleClass('is-expanded');
+			$('.search-results').slideToggle('slow');
+		});
+	</script>
+
+</body>
+</html>
